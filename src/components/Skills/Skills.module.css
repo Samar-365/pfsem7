@@ -1,0 +1,144 @@
+/* ═══════════════════════════════════════════════════════════════
+   SKILLS STYLES — Animejs.com Minimalist Dark Card Aesthetic
+   ═══════════════════════════════════════════════════════════════ */
+
+.skills {
+  position: relative;
+  padding: 120px 20px;
+  min-height: 100vh;
+  background: var(--bg-primary, #212121);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--text-primary, #ffffff);
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: -0.02em;
+}
+
+.titleLetter {
+  display: inline-block;
+}
+
+/* ─── Grid ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ─── Card ─── */
+.card {
+  padding: 28px;
+  border-radius: 12px;
+  background: var(--bg-card, #2b2a29);
+  border: 1px solid var(--border, #3a3937);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.card:hover {
+  border-color: var(--accent, #ff4e4e);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ─── Card Header ─── */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.iconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(255, 78, 78, 0.1) !important;
+}
+
+.skillName {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+  margin: 0;
+}
+
+.category {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-secondary, #adacab);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.years {
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent, #ff4e4e);
+  white-space: nowrap;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary, #adacab);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.progressContainer {
+  margin-top: auto;
+}
+
+.progressLabel {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-secondary, #adacab);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.progressTrack {
+  height: 6px;
+  background: #1f1e1d;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--accent, #ff4e4e) !important;
+  box-shadow: 0 0 10px rgba(255, 78, 78, 0.4);
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

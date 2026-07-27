@@ -1,0 +1,78 @@
+/* ═══════════════════════════════════════════════════════════════
+   COUNTERS STYLES — Mechanical Gear Counter Widget
+   ═══════════════════════════════════════════════════════════════ */
+
+.countersSection {
+  padding: 60px 20px;
+  background: var(--bg-primary, #212121);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 28px 24px;
+  border-radius: 12px;
+  background: var(--bg-card, #2b2a29);
+  border: 1px solid var(--border, #3a3937);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--accent, #ff4e4e);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.gearIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 78, 78, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent, #ff4e4e);
+}
+
+.gearIcon {
+  color: var(--accent, #ff4e4e);
+}
+
+.number {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--text-primary, #ffffff);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary, #adacab);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

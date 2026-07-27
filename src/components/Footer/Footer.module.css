@@ -1,0 +1,75 @@
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER STYLES
+   ═══════════════════════════════════════════════════════════════ */
+
+.footer {
+  padding: 40px 20px 30px;
+  text-align: center;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.topButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--bg-card, #1a1a2e);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  color: var(--text-secondary, #a1a1aa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.topButton:hover {
+  color: var(--accent, #00f3ff);
+  border-color: var(--accent, #00f3ff);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--accent-glow, rgba(0, 243, 255, 0.2));
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--border, rgba(255, 255, 255, 0.1));
+}
+
+.builtWith {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-secondary, #a1a1aa);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+}
+
+.codeIcon {
+  color: var(--accent, #00f3ff);
+}
+
+.heartIcon {
+  color: #ef4444;
+  animation: heartPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.copyright {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}

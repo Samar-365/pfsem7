@@ -1,0 +1,105 @@
+/* ═══════════════════════════════════════════════════════════════
+   LOADER STYLES — Pixel loading bar + cinematic intro
+   ═══════════════════════════════════════════════════════════════ */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--bg-primary, #0a0a0f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Loading Screen ─── */
+.loadingScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.loadingTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+  color: var(--accent, #00f3ff);
+  text-transform: uppercase;
+}
+
+.loadingLetter {
+  display: inline-block;
+  animation: loadFlicker 2s ease-in-out infinite alternate;
+  animation-delay: calc(var(--i, 0) * 0.05s);
+}
+
+.progressContainer {
+  width: 300px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent, #00f3ff), var(--accent-secondary, #a855f7));
+  border-radius: 2px;
+  box-shadow: 0 0 15px var(--accent-glow, rgba(0, 243, 255, 0.3));
+  transition: box-shadow 0.3s;
+}
+
+.percent {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary, #e4e4e7);
+  letter-spacing: 0.1em;
+}
+
+.loadingHint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-secondary, #a1a1aa);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ─── Intro Screen ─── */
+.introScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.introName {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 800;
+  color: var(--text-primary, #e4e4e7);
+  letter-spacing: -0.02em;
+  display: flex;
+}
+
+.introLetter {
+  display: inline-block;
+  opacity: 0;
+}
+
+.introSubtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
+  color: var(--accent, #00f3ff);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+@keyframes loadFlicker {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}

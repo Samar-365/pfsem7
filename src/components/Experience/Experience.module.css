@@ -1,0 +1,184 @@
+/* ═══════════════════════════════════════════════════════════════
+   EXPERIENCE STYLES — Manga Git Bento Grid
+   ═══════════════════════════════════════════════════════════════ */
+
+.experience {
+  position: relative;
+  padding: 120px 20px;
+  min-height: 100vh;
+  background: var(--bg-primary, #212121);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.headerBlock {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--text-primary, #ffffff);
+  display: flex;
+  justify-content: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.titleLetter { display: inline-block; }
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-secondary, #adacab);
+}
+
+/* ─── Bento Grid ─── */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  perspective: 1000px;
+}
+
+.bentoCard {
+  position: relative;
+  padding: 32px;
+  border-radius: 14px;
+  background: var(--bg-card, #2b2a29);
+  border: 1px solid var(--border, #3a3937);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transform-style: preserve-3d;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  overflow: hidden;
+}
+
+.featuredCard {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #2b2a29, #232221);
+}
+
+.bentoCard:hover {
+  border-color: var(--accent, #ff4e4e);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 78, 78, 0.15);
+}
+
+.slashLine {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent, #ff4e4e), transparent);
+  transform: rotate(-30deg);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.4s;
+}
+
+.bentoCard:hover .slashLine {
+  opacity: 1;
+  transform: rotate(-30deg) translateY(40px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.yearBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--accent, #ff4e4e);
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.commitHash {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary, #adacab);
+}
+
+.commitTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary, #ffffff);
+  margin: 0;
+}
+
+.roleTag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent, #ff4e4e);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.commitDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-secondary, #adacab);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-primary, #ffffff);
+}
+
+.arrow {
+  color: var(--accent, #ff4e4e);
+  flex-shrink: 0;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-secondary, #adacab);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-top: 14px;
+  border-top: 1px solid var(--border, #3a3937);
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredCard {
+    grid-column: span 1;
+  }
+}

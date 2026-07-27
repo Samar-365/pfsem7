@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════════════════════════
+   CUSTOM CURSOR STYLES — Animejs.com Red Dot & Cursor
+   ═══════════════════════════════════════════════════════════════ */
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--accent, #ff4e4e);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0.6;
+  mix-blend-mode: difference;
+  transition: width 0.3s ease, height 0.3s ease, border-width 0.3s ease, opacity 0.3s ease;
+  will-change: transform;
+}
+
+.cursor.expanded {
+  width: 60px;
+  height: 60px;
+  border-width: 3px;
+  opacity: 0.9;
+}
+
+.cursorDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--accent, #ff4e4e);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  will-change: transform;
+  box-shadow: 0 0 10px rgba(255, 78, 78, 0.5);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cursor,
+  .cursorDot {
+    display: none;
+  }
+}

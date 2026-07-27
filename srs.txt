@@ -1,0 +1,574 @@
+1. Introduction
+1.1 Purpose
+
+The purpose of this project is to create a highly interactive personal portfolio website that showcases the developer's skills, projects, achievements, and experience through cinematic animations powered entirely by Anime.js.
+
+Instead of a conventional scrolling website, the portfolio will feel like an interactive anime-inspired digital experience where every element reacts to user interaction.
+
+The website should demonstrate both frontend development expertise and animation skills.
+
+1.2 Scope
+
+The portfolio will serve as
+
+Personal Website
+Resume
+Project Showcase
+Interactive UI Demonstration
+Technical Skill Showcase
+
+Target audience:
+
+Recruiters
+Companies
+Hackathon judges
+Clients
+Open Source Communities
+2. Objectives
+Create an unforgettable first impression.
+Demonstrate advanced JavaScript animation skills.
+Showcase projects in a unique manner.
+Maintain excellent performance despite heavy animations.
+Keep the interface responsive.
+Increase recruiter engagement time.
+3. Overall Description
+
+Unlike ordinary portfolios,
+
+Every scroll,
+every click,
+every hover,
+every section,
+
+will trigger custom Anime.js animations.
+
+The entire website behaves almost like an interactive anime opening sequence.
+
+4. Technology Stack
+
+Frontend
+
+React
+Vite
+Anime.js
+CSS Modules
+Tailwind CSS (optional)
+React Router
+
+Icons
+
+Lucide Icons
+
+Deployment
+
+Netlify
+
+Version Control
+
+GitHub
+5. Functional Requirements
+FR-1 Landing Sequence
+
+Instead of immediately showing content,
+
+play a 3–5 second intro animation.
+
+Example
+
+BLACK SCREEN
+
+↓
+
+Typing effect
+
+"Samar Shetye"
+
+↓
+
+Glitch
+
+↓
+
+Camera zoom
+
+↓
+
+Portfolio loads
+
+Anime.js Features
+
+Timeline
+Scale
+Fade
+Translate
+Blur
+Stagger
+FR-2 Interactive Cursor
+
+Custom cursor
+
+expands on hover
+magnetic effect
+ripple effect
+trail animation
+
+Anime.js continuously updates cursor movement.
+
+FR-3 Hero Section
+
+Contains
+
+Name
+Designation
+Social links
+Resume Button
+Animated background
+
+Animations
+
+Floating text
+Letter-by-letter reveal
+Image reveal
+Particle motion
+Neon glow pulses
+FR-4 Anime Background
+
+Entire background continuously animates.
+
+Possible effects
+
+Grid
+
+↓
+
+Waves
+
+↓
+
+Lines
+
+↓
+
+Particles
+
+↓
+
+Constellation
+
+↓
+
+Pixel rain
+
+↓
+
+Circuit board
+
+Everything animated using Anime.js.
+
+FR-5 About Section
+
+Instead of paragraphs appearing instantly
+
+Cards unfold like manga panels.
+
+Profile image
+
+rotates
+scales
+reveals
+
+Text
+
+reveals word-by-word.
+
+FR-6 Skills Section
+
+Every skill appears as an animated object.
+
+Example
+
+Java
+
+slides
+
+React
+
+rotates
+
+Python
+
+falls
+
+MongoDB
+
+bounces
+
+Node
+
+flies
+
+Git
+
+explodes in
+
+Docker
+
+glitches
+
+Progress bars animate only when visible.
+
+FR-7 Project Showcase
+
+Instead of cards,
+
+Projects become interactive scenes.
+
+Each project opens like
+
+Folder
+
+↓
+
+Terminal
+
+↓
+
+Code
+
+↓
+
+Preview
+
+↓
+
+GitHub
+
+↓
+
+Live Demo
+
+Projects include
+
+Lingo Live
+Smart Job Recommendation Portal
+YTDownloadX
+Portfolio
+Future Projects
+
+Animations
+
+Card expansion
+Flip
+Parallax
+Image masking
+Smooth transitions
+FR-8 Achievement Timeline
+
+Anime timeline.
+
+Each achievement
+
+slides
+
+glows
+
+zooms
+
+into place.
+
+Includes
+
+2nd Place Multilingual Hackathon
+Certifications
+Courses
+GitHub Contributions
+FR-9 Experience Section
+
+Appears like Git commits.
+
+2024
+
+↓
+
+2025
+
+↓
+
+2026
+
+↓
+
+Future
+
+Each node animates when reached.
+
+FR-10 Contact Section
+
+Instead of normal form
+
+Fields draw themselves.
+
+Button morphs while hovering.
+
+Success animation
+
+Plane
+
+flies
+
+↓
+
+Envelope closes
+
+↓
+
+Tick appears
+FR-11 Navigation
+
+Navigation reacts to scrolling.
+
+Examples
+
+Glass morph
+
+↓
+
+Shrink
+
+↓
+
+Glow
+
+↓
+
+Underline animation
+
+↓
+
+Section indicator
+
+FR-12 Theme Switching
+
+Toggle between
+
+Light
+
+Dark
+
+Cyberpunk
+
+Pixel
+
+Retro
+
+Anime.js smoothly transitions colors.
+
+FR-13 Loading Screen
+
+Pixel loading animation.
+
+Loading percentage
+
+0%
+
+↓
+
+100%
+
+using Anime timeline.
+
+FR-14 Scroll Animations
+
+Every section
+
+Fade
+Scale
+Rotate
+Translate
+Blur
+
+Animations triggered only once.
+
+FR-15 Easter Eggs
+
+Examples
+
+Konami Code
+
+↓
+
+Hidden developer mode
+
+Click logo 10 times
+
+↓
+
+Matrix mode
+
+Typing
+
+sudo hire samar
+
+shows
+
+Access Granted
+6. Non Functional Requirements
+
+Performance
+
+Lighthouse >95
+
+Accessibility
+
+Keyboard navigation
+Proper contrast
+Screen reader friendly
+
+Responsiveness
+
+Desktop
+
+Laptop
+
+Tablet
+
+Mobile
+
+Cross Browser
+
+Chrome
+
+Firefox
+
+Edge
+
+Safari
+
+SEO
+
+Meta tags
+
+Open Graph
+
+Structured Data
+
+7. Animation Requirements
+
+Entire project should rely heavily on Anime.js.
+
+Animations include
+
+Timeline
+Stagger
+Morph
+SVG Animation
+Motion Path
+Text Animation
+Clip Path Reveal
+Elastic Motion
+Bounce
+Spring
+Camera Zoom
+Scale
+Rotation
+Glitch
+Opacity
+Blur
+Physics Effects
+8. User Flow
+Loading
+
+↓
+
+Intro Animation
+
+↓
+
+Hero
+
+↓
+
+About
+
+↓
+
+Skills
+
+↓
+
+Projects
+
+↓
+
+Achievements
+
+↓
+
+Experience
+
+↓
+
+Contact
+
+↓
+
+Footer
+9. Folder Structure
+portfolio
+
+├── public
+
+├── src
+
+│   ├── assets
+
+│   ├── animations
+│   │      intro.js
+│   │      hero.js
+│   │      skills.js
+│   │      projects.js
+│   │      timeline.js
+│   │      contact.js
+
+│   ├── components
+
+│   │      Navbar
+│   │      Hero
+│   │      About
+│   │      Skills
+│   │      Projects
+│   │      Timeline
+│   │      Contact
+│   │      Loader
+
+│   ├── hooks
+
+│   ├── utils
+
+│   ├── pages
+
+│   ├── App.jsx
+
+│   └── main.jsx
+10. Future Enhancements
+AI chatbot assistant representing you
+Voice-controlled navigation
+3D interactive room using Three.js
+GitHub contribution galaxy
+Dynamic project analytics
+Live coding terminal
+Resume generated on demand
+Interactive coding challenges
+Recruiter dashboard
+Multiplayer portfolio exploration
+Portfolio achievements (unlock badges as visitors explore)
+Personalized visitor greetings based on referral source
+WebGL shader effects integrated with Anime.js
+Background music with interactive controls
+11. Unique Selling Points (USP)
+Entire portfolio driven by Anime.js animations rather than conventional CSS transitions.
+Cinematic storytelling where visitors "experience" your journey instead of reading it.
+Interactive project showcases with folder, terminal, and live-demo transitions.
+Hidden easter eggs and gamified exploration to increase engagement.
+Performance-focused architecture despite rich animations.
+A distinctive visual identity that aligns with your pixel-art and retro aesthetic while showcasing modern frontend engineering skills.

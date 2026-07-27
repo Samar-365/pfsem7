@@ -1,0 +1,215 @@
+/* ═══════════════════════════════════════════════════════════════
+   HERO STYLES — Animejs.com Official Layout
+   ═══════════════════════════════════════════════════════════════ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px 60px;
+  background: var(--bg-primary, #212121);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ─── Left Column ─── */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mainTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.redTitle {
+  color: var(--accent, #ff4e4e);
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  color: var(--text-secondary, #adacab);
+  line-height: 1.5;
+  max-width: 540px;
+}
+
+/* ─── Bullet Feature List ─── */
+.bulletList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary, #ffffff);
+}
+
+.arrowIcon {
+  color: var(--text-secondary, #adacab);
+  flex-shrink: 0;
+}
+
+/* ─── CTA Buttons ─── */
+.ctaGroup {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  padding: 14px 32px;
+  border-radius: 8px;
+  background: var(--accent, #ff4e4e);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.ctaPrimary:hover {
+  background: #ff6666;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 78, 78, 0.4);
+}
+
+.ctaSecondary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary, #ffffff);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border, #3a3937);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.ctaSecondary:hover {
+  border-color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ─── Socials ─── */
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border, #3a3937);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary, #adacab);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.socialLink:hover {
+  color: var(--accent, #ff4e4e);
+  border-color: var(--accent, #ff4e4e);
+  background: rgba(255, 78, 78, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ─── Right Column: Circular Gauge Graphic ─── */
+.rightCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gaugeWrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gaugeSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.gaugeCenterBlock {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  background: #2a2928;
+  border: 1px solid var(--border, #3a3937);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.redBox {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: var(--accent, #ff4e4e);
+  box-shadow: 0 0 25px rgba(255, 78, 78, 0.5);
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .leftCol {
+    align-items: center;
+  }
+
+  .bulletList {
+    align-items: flex-start;
+  }
+
+  .gaugeWrapper {
+    width: 260px;
+    height: 260px;
+  }
+}

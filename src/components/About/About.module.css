@@ -1,0 +1,166 @@
+/* ═══════════════════════════════════════════════════════════════
+   ABOUT STYLES — Animejs.com Minimalist Layout
+   ═══════════════════════════════════════════════════════════════ */
+
+.about {
+  position: relative;
+  padding: 120px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--bg-primary, #212121);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--text-primary, #ffffff);
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  letter-spacing: -0.02em;
+}
+
+.titleLetter {
+  display: inline-block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.profileSection {
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.profilePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card, #2b2a29);
+  border: 1px solid var(--border, #3a3937);
+  border-radius: 16px;
+  color: var(--accent, #ff4e4e);
+}
+
+.profileGlow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: conic-gradient(
+    from 0deg,
+    var(--accent, #ff4e4e),
+    #ff7b7b,
+    var(--accent, #ff4e4e)
+  );
+  z-index: -1;
+  opacity: 0.4;
+  filter: blur(15px);
+  animation: profileGlowSpin 6s linear infinite;
+}
+
+@keyframes profileGlowSpin {
+  to { transform: rotate(360deg); }
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.bio {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary, #adacab);
+}
+
+.bioWord {
+  display: inline-block;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--bg-card, #2b2a29);
+  border: 1px solid var(--border, #3a3937);
+  transition: all 0.25s ease;
+}
+
+.panel:hover {
+  border-color: var(--accent, #ff4e4e);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.panelIcon {
+  color: var(--accent, #ff4e4e);
+  flex-shrink: 0;
+}
+
+.panelLabel {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-secondary, #adacab);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+
+.panelValue {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .panels {
+    grid-template-columns: 1fr;
+  }
+
+  .profileImage {
+    width: 180px;
+    height: 180px;
+  }
+}
