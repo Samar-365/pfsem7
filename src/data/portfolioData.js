@@ -7,7 +7,7 @@ export const PERSONAL = {
   name: 'Samar Shetye',
   role: 'Full-Stack & AI Software Developer',
   tagline: 'Crafting Digital Experiences with Code & AI',
-  bio: `I'm a passionate software developer specializing in full-stack development, AI integration, and building innovative tools. I blend modern web technologies with artificial intelligence to create seamless digital experiences — from Chrome extensions powered by Gemini AI, to real-time OCR translation suites, to immersive 3D web portfolios.`,
+  bio: `Engineering student pursuing B.E. in Information Technology with a strong foundation in full-stack and desktop application development. Passionate about applying technical and project skills to real-world problem solving.`,
   email: 'samar.shetye03@gmail.com',
   github: 'https://github.com/Samar-365',
   githubHandle: '@Samar-365',
@@ -16,7 +16,7 @@ export const PERSONAL = {
   twitterHandle: '@samarshetye',
   instagram: 'https://www.instagram.com/zealofzam/',
   instagramHandle: '@zealofzam',
-  resumeUrl: '#contact',
+  resumeUrl: 'https://drive.google.com/file/d/1VEJ8es-GJiNi5x4qmavdeRkaEjxwcbdk/view?usp=sharing',
   location: 'India',
 };
 
