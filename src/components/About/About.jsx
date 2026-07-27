@@ -86,10 +86,12 @@ export default function About() {
           {/* Profile Image */}
           <div className={styles.profileSection}>
             <div className={`${styles.profileImage}`} style={{ opacity: 0 }}>
-              <div className={styles.profilePlaceholder}>
-                <User size={64} />
-              </div>
-              <div className={styles.profileGlow} />
+              <div className={styles.diagonalLines} />
+              <img
+                src="/profile.png"
+                alt="Samar Shetye"
+                className={styles.profilePhoto}
+              />
             </div>
           </div>
 
