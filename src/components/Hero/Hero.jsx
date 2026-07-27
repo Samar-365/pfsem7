@@ -64,7 +64,7 @@ export default function Hero() {
           </h1>
 
           <p className={`${styles.subtitle} hero-role`}>
-            Full-Stack & AI Software Developer crafting high-performance, interactive web experiences powered by Anime.js.
+            Full-Stack & AI Software Developer crafting high-performance and seamless interactive web experiences.
           </p>
 
           <div className={`${styles.bulletList} hero-role`}>
@@ -75,10 +75,6 @@ export default function Hero() {
             <div className={styles.bulletItem}>
               <ArrowRight size={16} className={styles.arrowIcon} />
               <span>High-performance React & Microservice Architecture</span>
-            </div>
-            <div className={styles.bulletItem}>
-              <ArrowRight size={16} className={styles.arrowIcon} />
-              <span>Driven by custom Anime.js animations & timelines</span>
             </div>
           </div>
 

@@ -65,7 +65,6 @@ export default function App() {
           </main>
 
           <Footer />
-          <ThemeToggle theme={theme} onToggle={toggleTheme} />
         </>
       )}
     </>
