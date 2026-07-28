@@ -128,7 +128,6 @@ export const PROJECTS = [
       'Seamless DOM content injection into Gmail UI',
     ],
     githubUrl: 'https://github.com/Samar-365/lingo_mail',
-    demoUrl: 'https://samar-pf.netlify.app/',
   },
   {
     id: 'proj-lingo-live',
@@ -146,7 +145,6 @@ export const PROJECTS = [
       'Fast offline OCR combined with cloud AI translation',
     ],
     githubUrl: 'https://github.com/Samar-365/lingo_live',
-    demoUrl: 'https://samar-pf.netlify.app/',
   },
   {
     id: 'proj-ytdownloadx',
@@ -164,11 +162,10 @@ export const PROJECTS = [
       'Direct one-click download link generation',
     ],
     githubUrl: 'https://github.com/Samar-365/Youtube_video_downloader',
-    demoUrl: 'https://samar-pf.netlify.app/',
   },
   {
     id: 'proj-job-recommendation',
-    title: 'Smart Job Portal',
+    title: 'Smart Job Recommendation Portal',
     subtitle: 'ML Job Recommendation',
     category: 'Machine Learning & Web',
     color: '#10b981',
@@ -181,8 +178,7 @@ export const PROJECTS = [
       'Interactive Candidate & Recruiter Portals',
       'Real-time Market Demand & Skill Insights',
     ],
-    githubUrl: 'https://github.com/Samar-365',
-    demoUrl: 'https://samar-pf.netlify.app/',
+    githubUrl: 'https://github.com/PixelPawar/Smart-job-recommendation-portal-using-machine-learning.git',
   },
 ];
 

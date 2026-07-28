@@ -86,22 +86,7 @@ export default function Skills() {
 
                 <p className={styles.description}>{skill.description}</p>
 
-                <div className={styles.progressContainer}>
-                  <div className={styles.progressLabel}>
-                    <span>Proficiency</span>
-                    <span>{skill.confidence}%</span>
-                  </div>
-                  <div className={styles.progressTrack}>
-                    <div
-                      className={styles.progressBar}
-                      ref={(el) => (barRefs.current[i] = el)}
-                      style={{
-                        background: `linear-gradient(90deg, ${skill.color}, ${skill.color}88)`,
-                        width: '0%',
-                      }}
-                    />
-                  </div>
-                </div>
+
               </div>
             );
           })}

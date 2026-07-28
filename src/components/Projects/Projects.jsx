@@ -203,15 +203,7 @@ export default function Projects() {
                   <Github size={16} />
                   GitHub
                 </a>
-                <a
-                  href={activeProject.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${styles.termBtn} ${styles.termBtnPrimary} hoverable`}
-                >
-                  <ExternalLink size={16} />
-                  Live Demo
-                </a>
+
               </div>
             </div>
           </div>
