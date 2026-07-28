@@ -7,11 +7,11 @@ import useScrollAnimation from '../../hooks/useScrollAnimation.js';
 import { animateSkillEntrance, animateProgressBar } from '../../animations/skills.js';
 import { SKILLS } from '../../data/portfolioData.js';
 import {
-  Code, Terminal, Layout, Zap, Server, GitBranch, Sparkles,
+  Code, Terminal, Layout, Zap, Server, GitBranch, Sparkles, Database,
 } from 'lucide-react';
 import styles from './Skills.module.css';
 
-const iconMap = { Code, Terminal, Layout, Zap, Server, GitBranch, Sparkles };
+const iconMap = { Code, Terminal, Layout, Zap, Server, GitBranch, Sparkles, Database };
 
 export default function Skills() {
   const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.08 });
@@ -73,6 +73,9 @@ export default function Skills() {
                 ref={(el) => (cardRefs.current[i] = el)}
                 style={{ opacity: 0, '--skill-color': skill.color }}
               >
+                {/* Manga Accent Slash Line */}
+                <div className={styles.slashLine} />
+
                 <div className={styles.cardHeader}>
                   <div className={styles.iconWrap} style={{ background: `${skill.color}15` }}>
                     <Icon size={22} style={{ color: skill.color }} />

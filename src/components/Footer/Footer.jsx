@@ -39,10 +39,7 @@ export default function Footer() {
 
         <div className={styles.divider} />
 
-        <p className={styles.builtWith}>
-          Built with <Code2 size={14} className={styles.codeIcon} /> Anime.js
-          & <Heart size={14} className={styles.heartIcon} />
-        </p>
+
 
         <p className={styles.copyright}>
           © {new Date().getFullYear()} Samar Shetye. All rights reserved.

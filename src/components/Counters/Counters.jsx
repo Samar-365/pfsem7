@@ -63,6 +63,11 @@ export default function Counters() {
         duration: 700,
         delay: anime.stagger(120),
         easing: 'easeOutExpo',
+        complete: (anim) => {
+          anim.animatables.forEach((a) => {
+            a.target.style.transform = '';
+          });
+        },
       });
     }
   }, [isVisible]);
@@ -75,6 +80,8 @@ export default function Counters() {
             const Icon = item.icon;
             return (
               <div key={item.id} className={`${styles.card} hoverable`} style={{ opacity: 0 }}>
+                {/* Manga Accent Slash Line */}
+                <div className={styles.slashLine} />
                 <div className={styles.gearIconWrap} ref={(el) => (gearRefs.current[i] = el)}>
                   <Icon size={24} className={styles.gearIcon} />
                 </div>

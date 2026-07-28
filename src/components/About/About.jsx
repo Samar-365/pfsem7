@@ -107,7 +107,9 @@ export default function About() {
 
             <div className={styles.panels}>
               {infoPanels.map((panel, i) => (
-                <div key={i} className={styles.panel} style={{ opacity: 0 }}>
+                <div key={i} className={`${styles.panel} hoverable`} style={{ opacity: 0 }}>
+                  {/* Manga Accent Slash Line */}
+                  <div className={styles.slashLine} />
                   <panel.icon size={20} className={styles.panelIcon} />
                   <div>
                     <span className={styles.panelLabel}>{panel.label}</span>

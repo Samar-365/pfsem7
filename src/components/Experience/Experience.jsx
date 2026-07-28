@@ -11,7 +11,6 @@ import styles from './Experience.module.css';
 export default function Experience() {
   const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.08 });
   const hasAnimated = useRef(false);
-  const cardRefs = useRef([]);
 
   useEffect(() => {
     if (isVisible && !hasAnimated.current) {
@@ -27,54 +26,18 @@ export default function Experience() {
         easing: 'easeOutExpo',
       });
 
-      // Bento cards entrance
+      // Bento cards entrance matching Projects style
       anime({
         targets: `.${styles.bentoCard}`,
         opacity: [0, 1],
+        translateY: [80, 0],
         scale: [0.9, 1],
-        translateY: [40, 0],
         duration: 800,
-        delay: anime.stagger(150, { start: 300 }),
-        easing: 'easeOutElastic(1, .7)',
+        delay: anime.stagger(150, { start: 400 }),
+        easing: 'easeOutExpo',
       });
     }
   }, [isVisible]);
-
-  // Anime.js 3D Tilt on Mouse Move
-  const handleMouseMove = (e, index) => {
-    const card = cardRefs.current[index];
-    if (!card) return;
-
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-
-    const rotX = (-y / rect.height) * 14;
-    const rotY = (x / rect.width) * 14;
-
-    anime({
-      targets: card,
-      rotateX: rotX,
-      rotateY: rotY,
-      scale: 1.025,
-      duration: 300,
-      easing: 'easeOutQuad',
-    });
-  };
-
-  const handleMouseLeave = (index) => {
-    const card = cardRefs.current[index];
-    if (!card) return;
-
-    anime({
-      targets: card,
-      rotateX: 0,
-      rotateY: 0,
-      scale: 1,
-      duration: 600,
-      easing: 'easeOutElastic(1, .6)',
-    });
-  };
 
   const titleLetters = 'Experience'.split('');
 
@@ -103,11 +66,8 @@ export default function Experience() {
             return (
               <div
                 key={exp.id}
-                ref={(el) => (cardRefs.current[i] = el)}
                 className={`${styles.bentoCard} ${isFeatured ? styles.featuredCard : ''} hoverable`}
                 style={{ opacity: 0 }}
-                onMouseMove={(e) => handleMouseMove(e, i)}
-                onMouseLeave={() => handleMouseLeave(i)}
               >
                 {/* Manga Slice Line */}
                 <div className={styles.slashLine} />

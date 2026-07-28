@@ -109,6 +109,17 @@ export const SKILLS = [
     icon: 'Sparkles',
     entrance: 'slide',
   },
+  {
+    id: 'skill-databases',
+    name: 'Databases',
+    category: 'Database',
+    confidence: 80,
+    yearsExp: '2+ Years',
+    description: 'Relational & NoSQL database management including MySQL, SQLite, and MongoDB.',
+    color: '#3b82f6',
+    icon: 'Database',
+    entrance: 'bounce',
+  },
 ];
 
 export const PROJECTS = [

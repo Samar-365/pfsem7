@@ -115,6 +115,9 @@ export default function Projects() {
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && openProject(project)}
             >
+              {/* Manga Accent Slash Line */}
+              <div className={styles.slashLine} />
+
               <div className={styles.cardTop}>
                 <Folder size={20} style={{ color: project.color }} />
                 <span className={styles.cardCategory}>{project.category}</span>
