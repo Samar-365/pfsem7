@@ -60,7 +60,6 @@ export default function Navbar() {
       <div className={styles.navInner}>
         <button className={`${styles.logo} nav-logo hoverable`} onClick={() => scrollTo('hero')}>
           <span className={styles.logoAccent}>S</span>amar
-          <span className={styles.logoDot}>.</span>
         </button>
 
         <div className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ''}`}>

@@ -47,7 +47,6 @@ export default function Loader({ onComplete }) {
             <div className={styles.progressBar} ref={progressRef} />
           </div>
           <div className={styles.percent} ref={percentRef}>0%</div>
-          <div className={styles.loadingHint}>Loading cinematic experience...</div>
         </div>
       )}
 
