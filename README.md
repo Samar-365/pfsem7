@@ -43,6 +43,16 @@ A high-performance, cinematic developer portfolio built with **React 19**, **Vit
 
 ---
 
+## Services & Expertise
+
+- **Generative AI & Agentic Systems**: Autonomous AI agent engineering, LLM integration (Google Gemini, OpenAI), & NLP translation pipelines.
+- **Full-Stack Web Development**: End-to-end web applications with React 19 + Vite frontend & Python Flask / Node.js REST API backends.
+- **Chrome Extensions & Automation**: Custom Chrome Extension architecture, DOM content injection, and web scraping utilities.
+- **Desktop Apps & OCR Tools**: Python desktop GUI tools (CustomTkinter) with live screen region capture & Tesseract OCR.
+- **Analytics & Dynamic PDF Reporting**: Interactive analytics dashboards with Recharts & server-side ReportLab PDF generators.
+
+---
+
 ## Tech Stack
 
 - **Frontend**: React 19, Vite, HTML5, CSS3 (CSS Modules), Lucide React

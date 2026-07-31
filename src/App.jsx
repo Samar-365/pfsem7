@@ -12,6 +12,7 @@ import Skills from './components/Skills/Skills.jsx';
 import Projects from './components/Projects/Projects.jsx';
 import Achievements from './components/Achievements/Achievements.jsx';
 import Experience from './components/Experience/Experience.jsx';
+import Services from './components/Services/Services.jsx';
 import Contact from './components/Contact/Contact.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle.jsx';
@@ -61,6 +62,7 @@ export default function App() {
             <Projects />
             <Achievements />
             <Experience />
+            <Services />
             <Contact />
           </main>
 

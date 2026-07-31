@@ -337,6 +337,64 @@ export const EXPERIENCE = [
   },
 ];
 
+export const SERVICES = [
+  {
+    id: 'srv-genai',
+    title: 'Generative AI & Agentic Systems',
+    subtitle: 'LLM Architect & Agentic Workflows',
+    category: 'AI & Automation',
+    icon: 'Sparkles',
+    color: '#a855f7',
+    description: 'Engineering autonomous AI agents, integrating LLMs (Google Gemini, OpenAI), and developing real-time multilingual translation, summarization, and NLP data pipelines.',
+    tags: ['Gemini AI', 'Agentic AI', 'Prompt Engineering', 'NLP Pipelines'],
+    featured: true,
+  },
+  {
+    id: 'srv-fullstack',
+    title: 'Full-Stack Web Development',
+    subtitle: 'React & Flask Application Suite',
+    category: 'Web Engineering',
+    icon: 'Code2',
+    color: '#00f3ff',
+    description: 'Developing end-to-end modern web applications with React 19 + Vite on the frontend and Python Flask or Node.js REST API microservices.',
+    tags: ['React 19', 'Python / Flask', 'Node.js', 'REST APIs', 'Databases'],
+    featured: false,
+  },
+  {
+    id: 'srv-extensions',
+    title: 'Chrome Extensions & Automation',
+    subtitle: 'Custom Extensions & Browser Automation',
+    category: 'Browser Utility',
+    icon: 'Globe',
+    color: '#fbbf24',
+    description: 'Architecting custom Chrome Extensions with background service workers, Gmail/DOM content injection, web scraping, and media extraction utilities.',
+    tags: ['Chrome Extension API', 'DOM Injection', 'Asynchronous JS', 'YT-DLP'],
+    featured: false,
+  },
+  {
+    id: 'srv-desktop',
+    title: 'Desktop Apps & OCR Tools',
+    subtitle: 'Cross-Platform Python & Tesseract OCR',
+    category: 'Desktop Software',
+    icon: 'Monitor',
+    color: '#22c55e',
+    description: 'Building cross-platform desktop GUIs using Python and CustomTkinter, featuring live screen region capture, floating glass HUD overlays, and Tesseract OCR.',
+    tags: ['Python GUI', 'CustomTkinter', 'Tesseract OCR', 'Screen Capture'],
+    featured: false,
+  },
+  {
+    id: 'srv-analytics',
+    title: 'Analytics & Dynamic PDF Reporting',
+    subtitle: 'Dashboards & Dynamic Report Exporting',
+    category: 'Data & Analytics',
+    icon: 'BarChart3',
+    color: '#ef4444',
+    description: 'Creating interactive analytics dashboards with data visualizations (Recharts) and server-side PDF report export engines generated dynamically via ReportLab.',
+    tags: ['Recharts', 'ReportLab PDF', 'RBAC Security', 'Audit Logging'],
+    featured: true,
+  },
+];
+
 export const SOCIAL_LINKS = [
   { id: 'social-github', name: 'GitHub', icon: 'Github', url: 'https://github.com/Samar-365', handle: '@Samar-365', color: '#f87171' },
   { id: 'social-linkedin', name: 'LinkedIn', icon: 'Linkedin', url: 'https://www.linkedin.com/in/samar-shetye-86295432b/', handle: 'Samar Shetye', color: '#38bdf8' },
@@ -352,5 +410,6 @@ export const NAV_ITEMS = [
   { id: 'nav-projects', label: 'Projects', section: 'projects' },
   { id: 'nav-achievements', label: 'Achievements', section: 'achievements' },
   { id: 'nav-experience', label: 'Experience', section: 'experience' },
+  { id: 'nav-services', label: 'Services', section: 'services' },
   { id: 'nav-contact', label: 'Contact', section: 'contact' },
 ];
