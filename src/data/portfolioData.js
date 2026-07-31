@@ -289,6 +289,20 @@ export const EXPERIENCE = [
     color: '#00f3ff',
   },
   {
+    id: 'exp-lenovo-leap',
+    year: '2026',
+    title: 'Generative AI & Agentic Systems Engineering',
+    role: 'Lenovo LEAP NextGen Scholar • AICTE Internship',
+    description: 'Completed a 6-week AICTE internship under the Lenovo LEAP NextGen Scholar Program implemented by BharatCares, gaining hands-on exposure to Generative AI & Agentic AI systems.',
+    highlights: [
+      'Engineered Generative AI & Agentic AI systems for real-world applications',
+      'Strengthened technical skills in industry-oriented problem solving',
+      'Received continuous guidance & mentorship from Lenovo, AICTE, and BharatCares experts',
+    ],
+    color: '#ef4444',
+    featured: true,
+  },
+  {
     id: 'exp-future',
     year: 'Future',
     title: 'What\'s Next — Pushing Boundaries',
@@ -300,6 +314,7 @@ export const EXPERIENCE = [
       'Open-source contributions & community building',
     ],
     color: '#fbbf24',
+    featured: true,
   },
 ];
 

@@ -60,8 +60,8 @@ export default function Experience() {
         {/* Bento Grid */}
         <div className={styles.bentoGrid}>
           {EXPERIENCE.map((exp, i) => {
-            const isFeatured = i === 3; // 2026 current year featured panel
-            const commitHash = `commit#${exp.year.toLowerCase().replace(/[^a-z0-9]/g, '')}a7f`;
+            const isFeatured = Boolean(exp.featured);
+            const commitHash = `commit#${exp.id.replace('exp-', '').toLowerCase().replace(/[^a-z0-9]/g, '')}a7f`;
 
             return (
               <div
