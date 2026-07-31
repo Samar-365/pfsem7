@@ -1,21 +1,21 @@
-# ⚡ Samar Shetye — Cinematic Portfolio & Interactive Web Experience
+# Samar Shetye — Portfolio & Interactive Web Experience
 
 A high-performance, cinematic developer portfolio built with **React 19**, **Vite**, **Anime.js**, and custom **CSS Modules**. Designed with modern dark-mode aesthetics, dynamic scroll animations, glassmorphism, and a Git-Commit Bento Grid for showcasing software journey milestones.
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
-- **🎬 Anime.js Powered Animations**: Fluid entrance transitions, staggering text effects, and interactive hover animations.
-- **💼 Interactive Projects Showcase**: Terminal-style modal drawer displaying full-stack applications, feature lists, tech tags, and direct GitHub links.
-- **📜 Git-Commit Bento Grid Experience**: Software journey structured as git commit logs, highlighted featured milestones, and custom badges.
-- **🏆 Achievements & Badges**: Interactive cards detailing hackathon wins, AI innovations, and desktop OCR application milestones.
-- **⚡ Tech Stack & Skills Matrix**: Interactive skill tags categorized by Frontend, Backend, AI & Automation, Databases, and DevOps.
-- **🎨 Dark Mode & Responsive Layout**: Tailored CSS variable design system optimized across all screen sizes.
+- **Anime.js Powered Animations**: Fluid entrance transitions, staggering text effects, and interactive hover animations.
+- **Interactive Projects Showcase**: Terminal-style modal drawer displaying full-stack applications, feature lists, tech tags, and direct GitHub links.
+- **Git-Commit Bento Grid Experience**: Software journey structured as git commit logs, highlighted featured milestones, and custom badges.
+- **Achievements & Badges**: Interactive cards detailing hackathon wins, AI innovations, and desktop OCR application milestones.
+- **Tech Stack & Skills Matrix**: Interactive skill tags categorized by Frontend, Backend, AI & Automation, Databases, and DevOps.
+- **Dark Mode & Responsive Layout**: Tailored CSS variable design system optimized across all screen sizes.
 
 ---
 
-## 🚀 Featured Projects
+## Featured Projects
 
 | Project | Category | Tech Stack | Highlights |
 | :--- | :--- | :--- | :--- |
@@ -27,7 +27,7 @@ A high-performance, cinematic developer portfolio built with **React 19**, **Vit
 
 ---
 
-## 🎓 Experience Milestones
+## Experience Milestones
 
 - **2026 — Generative AI & Agentic Systems Engineering (Lenovo LEAP NextGen Scholar)**:
   - Completed 6-week AICTE internship implemented by BharatCares.
@@ -43,7 +43,7 @@ A high-performance, cinematic developer portfolio built with **React 19**, **Vit
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: React 19, Vite, HTML5, CSS3 (CSS Modules), Lucide React
 - **Animations**: Anime.js (`animejs/lib/anime.es.js`)
@@ -53,7 +53,7 @@ A high-performance, cinematic developer portfolio built with **React 19**, **Vit
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 animejs/
@@ -81,7 +81,7 @@ animejs/
 
 ---
 
-## 🛠️ Local Development Setup
+## Local Development Setup
 
 ### Prerequisites
 - **Node.js**: v18.0.0 or higher
@@ -113,9 +113,9 @@ animejs/
 
 ---
 
-## 📬 Contact & Connect
+## Contact & Connect
 
 - **Email**: samar.shetye03@gmail.com
-- **LinkedIn**: [Samar Shetye](https://www.linkedin.com/in/samar-shetye-86295432b/)
+- **LinkedIn**: [Samar Shetye](https://www.linkedin.com/in/samar-shetye/)
 - **GitHub**: [@Samar-365](https://github.com/Samar-365)
 - **X (Twitter)**: [@samarshetye](https://x.com/samarshetye)
