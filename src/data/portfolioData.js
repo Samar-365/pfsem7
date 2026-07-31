@@ -191,6 +191,25 @@ export const PROJECTS = [
     ],
     githubUrl: 'https://github.com/PixelPawar/Smart-job-recommendation-portal-using-machine-learning.git',
   },
+  {
+    id: 'proj-issue-tracker',
+    title: 'Issue Tracker (Mini Jira)',
+    subtitle: 'Agile Project & Issue Suite',
+    category: 'Full-Stack & Web Application',
+    color: '#38bdf8',
+    shortDesc: 'Full-stack Issue & Project Management web application built with Flask REST API & React + Vite frontend.',
+    fullDesc: 'Issue Tracker (Mini Jira) is a full-stack Issue & Project Management web application built with a Flask 3.1 REST API backend and a modern React 19 + Vite frontend. Designed for agile teams to track projects, manage bugs & tasks, monitor activity logs, generate PDF reports via ReportLab, and visualize workload metrics with Recharts.',
+    techStack: ['Python / Flask 3.1', 'React 19', 'Vite', 'Flask-SQLAlchemy', 'JWT Auth', 'Recharts', 'ReportLab PDF', 'React Router v7'],
+    features: [
+      'Authentication & Role-Based Access Control (Admin, Manager, User roles with JWT blocklist)',
+      'Project management with custom keys, descriptions & assigned team members',
+      'Full issue lifecycle (Open, In Progress, Resolved, Closed) with Bug/Feature/Task types',
+      'Interactive Recharts analytics dashboard (status, priority breakdown & team workload)',
+      'Dynamic PDF project summary & issue report exports generated via ReportLab',
+      'Comprehensive system activity audit logging & real-time user notification tracking',
+    ],
+    githubUrl: 'https://github.com/Samar-365/IssueTrack',
+  },
 ];
 
 export const ACHIEVEMENTS = [
