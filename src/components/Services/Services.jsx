@@ -98,7 +98,7 @@ export default function Services() {
 
                 {/* Card Footer */}
                 <div className={styles.cardFooter}>
-                  <Zap size={14} className={styles.zapIcon} style={{ color: srv.color }} />
+                  <Zap size={14} className={styles.zapIcon} style={{ color: '#ff4e4e' }} />
                   <span>Available for Projects</span>
                 </div>
               </div>
