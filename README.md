@@ -1,6 +1,6 @@
 # Samar Shetye — Portfolio & Interactive Web Experience
 
-🌐 **Live Demo**: [https://samarshetye.netlify.app/](https://samarshetye.netlify.app/)
+**Live Demo**: [https://samarshetye.netlify.app/](https://samarshetye.netlify.app/)
 
 A high-performance, cinematic developer portfolio built with **React 19**, **Vite**, **Anime.js**, and custom **CSS Modules**. Designed with modern dark-mode aesthetics, dynamic scroll animations, glassmorphism, and a Git-Commit Bento Grid for showcasing software journey milestones.
 
