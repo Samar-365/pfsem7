@@ -19,11 +19,13 @@ export default function CompassScroll() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState('Hero');
   const [isDragging, setIsDragging] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const isDraggingRef = useRef(false);
   const startYRef = useRef(0);
   const startScrollRef = useRef(0);
+  const hideTimerRef = useRef(null);
 
-  // Synchronize scroll progress and detect active section
+  // Synchronize scroll progress, detect active section, and manage visibility timeout
   const handleScroll = useCallback(() => {
     const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
     if (totalHeight <= 0) return;
@@ -31,6 +33,13 @@ export default function CompassScroll() {
     const currentY = Math.max(0, window.scrollY);
     const progress = Math.min(1, Math.max(0, currentY / totalHeight));
     setScrollProgress(progress);
+
+    // Show compass when scrolling
+    setIsVisible(true);
+    if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
+    hideTimerRef.current = setTimeout(() => {
+      setIsVisible(false);
+    }, 2500);
 
     // Precise section detection
     const triggerPosition = currentY + 150;
@@ -52,6 +61,7 @@ export default function CompassScroll() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
+      if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
     };
   }, [handleScroll]);
 
@@ -121,7 +131,7 @@ export default function CompassScroll() {
 
   return (
     <div
-      className={`${styles.compassContainer} ${isDragging ? styles.isDragging : ''}`}
+      className={`${styles.compassContainer} ${isVisible ? styles.isVisible : ''} ${isDragging ? styles.isDragging : ''}`}
       onMouseDown={handlePointerDown}
       onTouchStart={handlePointerDown}
       title="Click dots or drag to scroll"
