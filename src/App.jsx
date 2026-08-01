@@ -16,6 +16,7 @@ import Services from './components/Services/Services.jsx';
 import Contact from './components/Contact/Contact.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle.jsx';
+import CompassScroll from './components/CompassScroll/CompassScroll.jsx';
 import { useTheme } from './hooks/useTheme.js';
 import { initEasterEggs } from './utils/easterEggs.js';
 import { animateGridLines } from './animations/background.js';
@@ -49,6 +50,7 @@ export default function App() {
       {loaded && (
         <>
           <Navbar />
+          <CompassScroll />
 
           <div className="bg-grid" />
           <div className="bg-particles" />

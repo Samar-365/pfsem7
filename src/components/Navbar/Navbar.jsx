@@ -85,18 +85,6 @@ export default function Navbar() {
           <span />
         </button>
       </div>
-
-      {/* Section indicator dots (right edge) */}
-      <div className={styles.sectionDots}>
-        {NAV_ITEMS.map((item) => (
-          <button
-            key={item.id}
-            className={`${styles.sectionDot} ${activeSection === item.section ? styles.dotActive : ''}`}
-            onClick={() => scrollTo(item.section)}
-            aria-label={item.label}
-          />
-        ))}
-      </div>
     </nav>
   );
 }
