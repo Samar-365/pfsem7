@@ -16,7 +16,7 @@ export const PERSONAL = {
   twitterHandle: '@samarshetye',
   instagram: 'https://www.instagram.com/zealofzam/',
   instagramHandle: '@zealofzam',
-  resumeUrl: 'https://drive.google.com/file/d/1VEJ8es-GJiNi5x4qmavdeRkaEjxwcbdk/view?usp=sharing',
+  resumeUrl: 'https://drive.google.com/file/d/1XlnWXbcfjY0yaoReLciFc536vX--wxW7/view?usp=sharing',
   location: 'India',
 };
 
