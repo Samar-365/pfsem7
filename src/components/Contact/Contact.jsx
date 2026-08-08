@@ -15,8 +15,10 @@ const iconMap = { Github, Linkedin, Twitter, Instagram, Mail };
 
 export default function Contact() {
   const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
-  const [formState, setFormState] = useState('idle'); // idle → sending → success
+  const [formState, setFormState] = useState('idle'); // idle → sending → success → error
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const hasAnimated = useRef(false);
 
   useEffect(() => {
@@ -57,45 +59,112 @@ export default function Contact() {
     setTimeout(() => setCopiedEmail(false), 2500);
   };
 
-  const handleSubmit = (e) => {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const triggerSuccessAnimation = () => {
+    setFormState('success');
+    setFormData({ name: '', email: '', message: '' });
+
+    const tl = anime.timeline({ easing: 'easeOutExpo' });
+
+    tl.add({
+      targets: `.${styles.successPlane}`,
+      translateY: [0, -60],
+      translateX: [0, 60],
+      rotate: [0, -20],
+      opacity: [1, 0],
+      scale: [1, 0.5],
+      duration: 600,
+    });
+
+    tl.add({
+      targets: `.${styles.successEnvelope}`,
+      opacity: [0, 1],
+      scale: [0.5, 1],
+      rotateX: [30, 0],
+      duration: 500,
+    }, '-=200');
+
+    tl.add({
+      targets: `.${styles.successTick}`,
+      opacity: [0, 1],
+      scale: [0, 1],
+      duration: 500,
+      easing: 'easeOutElastic(1, .5)',
+    }, '+=300');
+
+    setTimeout(() => setFormState('idle'), 4000);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormState('sending');
+    setErrorMessage('');
 
-    // Simulate send
-    setTimeout(() => {
-      setFormState('success');
+    const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
+    const formspreeUrl = import.meta.env.VITE_FORMSPREE_URL;
+    const web3Key = import.meta.env.VITE_WEB3FORMS_KEY;
 
-      // Success animation sequence
-      const tl = anime.timeline({ easing: 'easeOutExpo' });
+    let endpoint = '';
+    let payload = {};
 
-      tl.add({
-        targets: `.${styles.successPlane}`,
-        translateY: [0, -60],
-        translateX: [0, 60],
-        rotate: [0, -20],
-        opacity: [1, 0],
-        scale: [1, 0.5],
-        duration: 600,
+    if (formspreeId || formspreeUrl) {
+      endpoint = formspreeUrl || `https://formspree.io/f/${formspreeId}`;
+      payload = {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      };
+    } else if (web3Key) {
+      endpoint = 'https://api.web3forms.com/submit';
+      payload = {
+        access_key: web3Key,
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        subject: `New Portfolio Message from ${formData.name}`,
+      };
+    } else {
+      // Default Zero-Config provider using FormSubmit.co
+      endpoint = `https://formsubmit.co/ajax/${PERSONAL.email}`;
+      payload = {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        _subject: `New Portfolio Contact Message from ${formData.name}`,
+        _captcha: 'false',
+      };
+    }
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
 
-      tl.add({
-        targets: `.${styles.successEnvelope}`,
-        opacity: [0, 1],
-        scale: [0.5, 1],
-        rotateX: [30, 0],
-        duration: 500,
-      }, '-=200');
+      const result = await response.json().catch(() => ({}));
+      const isSuccess = response.ok || result.success === 'true' || result.success === true || result.ok;
 
-      tl.add({
-        targets: `.${styles.successTick}`,
-        opacity: [0, 1],
-        scale: [0, 1],
-        duration: 500,
-        easing: 'easeOutElastic(1, .5)',
-      }, '+=300');
-
-      setTimeout(() => setFormState('idle'), 4000);
-    }, 1500);
+      if (isSuccess) {
+        triggerSuccessAnimation();
+      } else if (result.message && result.message.includes('Activation')) {
+        // FormSubmit requires a 1-click activation link for new emails
+        triggerSuccessAnimation();
+      } else {
+        setErrorMessage(result.error || result.message || 'Failed to send message. Please try again.');
+        setFormState('error');
+      }
+    } catch {
+      setErrorMessage('Network error. Please try again later.');
+      setFormState('error');
+    }
   };
 
   const titleLetters = 'Get In Touch'.split('');
@@ -137,11 +206,20 @@ export default function Contact() {
                 </div>
               ) : (
                 <>
+                  {errorMessage && (
+                    <div style={{ color: '#ff4d4d', fontSize: '0.875rem', marginBottom: '1rem' }}>
+                      {errorMessage}
+                    </div>
+                  )}
+
                   <div className={styles.formRow}>
                     <div className={styles.field}>
                       <label className={styles.label}>Name</label>
                       <input
                         type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
                         className={styles.input}
                         placeholder="Your Name"
                         required
@@ -151,6 +229,9 @@ export default function Contact() {
                       <label className={styles.label}>Email</label>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
                         className={styles.input}
                         placeholder="your@email.com"
                         required
@@ -161,6 +242,9 @@ export default function Contact() {
                   <div className={styles.field}>
                     <label className={styles.label}>Message</label>
                     <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       className={styles.textarea}
                       placeholder="Tell me about your project or inquiry..."
                       rows={4}
